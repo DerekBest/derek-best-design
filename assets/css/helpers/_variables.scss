@@ -1,0 +1,75 @@
+// Extends
+%clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+// Breakpoints
+$phone-width: 480px;
+$tablet-width: 720px;
+$ipad-min-width: 768px;
+$ipad-max-width: 1024px;
+$desktop-small-width: 1366px;
+$desktop-medium-width: 1440px;
+$desktop-large-width: 1920px;
+$desktop-x-large-width: 2560px;
+
+// Fonts
+$main-nav-font-size: 1.2rem;
+$headers: "Film Noir", Times New Roman, serif;
+$body-text: "Roboto", Arial, sans-serif;
+$font-awesome-kit: "Font Awesome Kit";
+$font-awesome: "Font Awesome 6 Free";
+$font-awesome-brands: "Font Awesome 6 Brands";
+$theme-descriptive-content-margin: 0 auto 2rem auto;
+
+// Background
+$footer-bg-large: rgba(0, 0, 0, 0.1);
+$footer-bg-small: rgba(255, 255, 255, 0.7);
+$header-sticky-bg: #48777b;
+
+// Colors
+$tertiary-blue-5: #004981;
+$comp-secondary-3: #b26f00;
+$body-bg: #001729;
+$bright-blue: #007ecf;
+$white: #fff;
+$white-light: #fafafa;
+$white-medium: #e9e9e9;
+$white-transparent: rgba(255, 255, 255, 0.6);
+$black: #000;
+$black-transparent: rgba(0, 0, 0, 0.9);
+$dark: #111111;
+$yellow: #e9e57e;
+$grey-dark: #555;
+$grey-medium: #727272;
+$grey-light: #ccc;
+$facebook-blue: #3c589b;
+$twitter-blue: #1da1f3;
+$youtube-red: #e11d2c;
+$flickr-pink: #fe0084;
+$flickr-blue: #246cd8;
+$instagram-purple: #a435b5;
+$rss-orange: #ff7b0a;
+$linked-in-blue: #0077b5;
+
+// links
+$main-link-color: #fff;
+$main-hover-color: #006a83;
+$transparent-nav-link-color: #eee;
+$transparent-nav-hover-color: #fff;
+
+$border-radius-small: 2px;
+$border-radius-medium: 4px;
+$border-radius-large: 10px;
+
+// Effects
+$transition-slow: all 500ms ease-in-out;
+$transition-medium: all 250ms ease-in-out;
+$transition-fast: all 150ms ease-in-out;
+
+// Features
+$image-border: 1px solid #a17d4b;
+$image-border-radius: 5px;
+$portfolio-image-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.1);

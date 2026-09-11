@@ -1,0 +1,14 @@
+footer {
+  //grid-column: 1 / span 3; /* Spanning all three columns */
+  text-align: center;
+  //background-color: $dark;
+  color: $white;
+  padding: 10px;
+}
+#my_centered_buttons {
+  a {
+    span {
+      background-color: transparent !important;
+    }
+  }
+}
