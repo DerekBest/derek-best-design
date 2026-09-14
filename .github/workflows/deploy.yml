@@ -1,20 +1,22 @@
-name: Deploy Portfolio Site to Static.app
+name: Deploy Plain Portfolio Site to Static.app
 
 on:
   push:
     branches:
-      - main # Triggers whenever you push changes to your main branch
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    # 🎯 ADD THIS ENV BLOCK TO FORCE NODE 20 PATTERNS NATIVELY
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+
     steps:
-      # 1. Pull down your raw HTML and asset folders from GitHub
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # 2. Hand the files directly to Static.app (since no build step is needed!)
       - name: Deploy to Static.app
         uses: designmodo/static-app-deploy-action@v1.0.0
         with:
