@@ -1,6 +1,5 @@
 /* HELPERS
 ==========================================================================================*/
-@import url("https://cloudflare.com");
 /* BASE
 ==========================================================================================*/
 @font-face {
@@ -332,7 +331,7 @@ footer {
   top: 3px;
   left: 50%;
   transform: translateX(-6px);
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free";
   font-size: 18px;
   color: #005ab5;
 }
@@ -475,7 +474,7 @@ footer {
   position: absolute;
   top: -30px;
   left: 0;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free";
   text-align: center;
   color: #fff;
   background: rgba(0, 0, 0, 0.85);
@@ -506,7 +505,7 @@ footer {
 .hero-main::after {
   display: none;
   content: "\f078";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free";
   font-size: 58px;
   color: rgba(0, 73, 129, 0.6);
   position: absolute;
@@ -640,8 +639,9 @@ footer {
 }
 .expertise ul li::before {
   background: url(/assets/img/sm-icon-bg.png) no-repeat center center;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free";
   font-size: 22px;
+  font-weight: 600;
   color: #007ecf;
   width: 50px;
   height: 50px;
@@ -697,7 +697,7 @@ footer {
   background-color: #001729;
   border-radius: 50%;
   color: #005ab5;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free";
   text-align: center;
   font-size: 2.5em;
   left: 50%;
@@ -730,19 +730,19 @@ footer {
   -webkit-font-smoothing: antialiased;
 }
 .contact-info li.email:before {
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
   content: "\f0e0";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
 }
 .contact-info li.linked-in:before {
-  font-family: "Font Awesome 6 Brands";
   content: "\f08c";
+  font-family: "Font Awesome 7 Brands";
   font-weight: 400;
 }
 .contact-info li.resume:before {
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
   content: "\f15b";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
 }
 
 .share-icons {
