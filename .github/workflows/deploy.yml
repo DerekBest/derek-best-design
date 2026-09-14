@@ -9,16 +9,22 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    # 🎯 ADD THIS ENV BLOCK TO FORCE NODE 20 PATTERNS NATIVELY
-    env:
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-
     steps:
+      # 1. Pull down your repository code
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # 2. THE FIXED STEP: Isolate your assets into a clean deploy folder, completely ignoring the heavy hidden .git directory!
+      - name: Prepare Clean Deployment Folder
+        run: |
+          mkdir deploy_package
+          cp -r index.html assets deploy_package/
+
+      # 3. Direct Static.app's tool to upload ONLY your verified subfolder files
       - name: Deploy to Static.app
         uses: designmodo/static-app-deploy-action@v1.0.0
         with:
           api-key: ${{ secrets.STATIC_APP_API_KEY }}
           pid: "aenk72fg8j"
+          # This tells the script to bypass your root directory and upload from the package folder
+          build-dir: "./deploy_package"
