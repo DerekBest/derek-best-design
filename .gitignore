@@ -9,3 +9,8 @@ psd/
 working/
 dist
 .cache
+.htaccess
+gallery-test.html
+humans.txt
+package-lock.json
+package.json
