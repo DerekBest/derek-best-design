@@ -258,7 +258,7 @@
     &.email {
       &:before {
         font-family: $font-awesome;
-        font-weight: 600;
+        font-weight: 900;
         content: "\f0e0";
       }
     }
@@ -266,12 +266,13 @@
       &:before {
         font-family: $font-awesome-brands;
         content: "\f08c";
+        font-weight: 400;
       }
     }
     &.resume {
       &:before {
         font-family: $font-awesome;
-        font-weight: 600;
+        font-weight: 900;
         content: "\f15b";
       }
     }

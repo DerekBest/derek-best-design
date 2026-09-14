@@ -1,5 +1,6 @@
 /* HELPERS
 ==========================================================================================*/
+@import url("https://cloudflare.com");
 /* BASE
 ==========================================================================================*/
 @font-face {
@@ -730,16 +731,17 @@ footer {
 }
 .contact-info li.email:before {
   font-family: "Font Awesome 6 Free";
-  font-weight: 600;
+  font-weight: 900;
   content: "\f0e0";
 }
 .contact-info li.linked-in:before {
   font-family: "Font Awesome 6 Brands";
   content: "\f08c";
+  font-weight: 400;
 }
 .contact-info li.resume:before {
   font-family: "Font Awesome 6 Free";
-  font-weight: 600;
+  font-weight: 900;
   content: "\f15b";
 }
 
