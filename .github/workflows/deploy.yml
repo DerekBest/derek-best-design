@@ -18,7 +18,7 @@ jobs:
       - name: Prepare Clean Deployment Folder
         run: |
           mkdir deploy_package
-          cp -r index.html assets deploy_package/
+          cp -r index.html favicon.ico assets deploy_package/
 
       # 3. Direct Static.app's tool to upload ONLY your verified subfolder files
       - name: Deploy to Static.app
