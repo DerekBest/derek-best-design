@@ -12,6 +12,4 @@ dist
 .htaccess
 gallery-test.html
 humans.txt
-package-lock.json
-package.json
 README.md
