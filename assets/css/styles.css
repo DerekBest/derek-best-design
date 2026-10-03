@@ -677,7 +677,7 @@ h2 em {
 
 h1 {
   margin: 0 0 2rem 0;
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2.5rem, 5vw, 5.75rem);
   font-weight: 700;
   letter-spacing: -0.075em;
   line-height: 0.88;
@@ -685,10 +685,10 @@ h1 {
 }
 
 h2 {
+  margin-top: 0;
+  font-size: clamp(2rem, 3.35vw, 3.8rem);
   letter-spacing: -0.06em;
   line-height: 0.95;
-  font-size: clamp(2.5rem, 5vw, 5rem);
-  margin-top: 0;
 }
 
 h3 {
@@ -702,6 +702,15 @@ h4 {
   margin-bottom: 0.5em;
 }
 
+@media screen and (max-width: 600px) {
+  h1 {
+    margin: 0 0 40px 0;
+    letter-spacing: normal;
+  }
+  h1 span {
+    margin-left: -5px;
+  }
+}
 /* PAGES
 ==========================================================================================*/
 .eyebrow {
@@ -1724,9 +1733,6 @@ footer h2 {
 /* MEDIA QUERIES
 ==========================================================================================*/
 @media screen and (max-width: 900px) {
-  h1 {
-    font-size: clamp(3.5rem, 14vw, 6rem);
-  }
   .grid-header,
   .grid-hero,
   .grid-work-ready,
@@ -1814,14 +1820,6 @@ footer h2 {
   }
   .portfolio-content.portfolio--level-2 .portfolio-intro {
     margin: 0;
-  }
-  h1 {
-    font-size: 50px;
-    margin: 0 0 40px 0;
-    letter-spacing: 5px;
-  }
-  h1 span {
-    margin-left: -5px;
   }
   .expertise ul {
     display: block;
