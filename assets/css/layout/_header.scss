@@ -1,12 +1,83 @@
+@use "../helpers/variables" as vars;
+
+.site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 100;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  &.is-scrolled {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+  }
+  .header-container {
+    &.header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 90px;
+      grid-column: 1 / 12;
+    }
+    .main-nav {
+      display: flex;
+      gap: 32px;
+      a {
+        color: vars.$bright-blue;
+        font-size: 0.8rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+          color: vars.$white;
+        }
+      }
+    }
+  }
+}
+.logo {
+  display: flex;
+  color: vars.$tertiary-blue-5;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  text-decoration: none;
+  align-items: center;
+  &:hover span {
+    color: vars.$bright-blue;
+  }
+  span {
+    display: block;
+  }
+  .logo--image {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin: 0 16px 0 0;
+    background: vars.$body-bg;
+    border: 1px solid vars.$tertiary-blue-5;
+    border-radius: 50%;
+    img {
+      width: 70%;
+      height: 70%;
+      margin: 0 auto;
+    }
+  }
+}
+/*
 header {
-  grid-column: 1 / span 3; /* Spanning all three columns */
-  /*background: rgba(0, 0, 0, 0.4)
-    linear-gradient(180deg, rgba(0,0,0,0.7), transparent)*/
+  grid-column: 1 / span 3; //Spanning all three columns
   position: fixed;
   z-index: 100;
   width: 100%;
   min-height: 90px;
-  transition: $transition-medium;
+  transition: vars.$transition-medium;
   .nav--top {
     display: flex;
     align-items: center;
@@ -15,7 +86,7 @@ header {
     right: 0;
     max-width: 400px;
     height: 90px;
-    transition: $transition-medium;
+    transition: vars.$transition-medium;
     ul {
       flex: 1;
       list-style: none;
@@ -40,11 +111,11 @@ header {
     width: 300px;
     height: 90px;
     padding: 0 0 0 24px;
-    transition: $transition-medium;
+    transition: vars.$transition-medium;
   }
   &.sticky {
     min-height: 60px;
-    background: $header-sticky-bg;
+    background: vars.$header-sticky-bg;
     .logo {
       width: 160px;
       height: 60px;
@@ -62,3 +133,4 @@ header {
   cursor: pointer;
   font-size: 24px;
 }
+*/

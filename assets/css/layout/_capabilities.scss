@@ -1,0 +1,83 @@
+@use "../helpers/variables" as vars;
+
+/* --------------------------------
+   CAPABILITIES
+-------------------------------- */
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.capability,
+.capability-item {
+  & > span {
+    color: vars.$tertiary-blue-5;
+    font-size: 0.7rem;
+    opacity: 0.5;
+  }
+  h2,
+  h3 {
+    margin: 35px 0 15px;
+  }
+  &:hover {
+    border-top-color: vars.$bright-blue;
+    transform: translateY(-4px);
+    span {
+      color: vars.$bright-blue;
+    }
+  }
+}
+.capability {
+  padding-top: 25px;
+  border-top: 1px solid vars.$tertiary-blue-5;
+  h3,
+  p {
+    color: vars.$bright-blue;
+  }
+  h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    &::before {
+      //content: "\f53f";
+      display: inline-block;
+      font-family: vars.$font-awesome;
+      margin-right: 10px;
+    }
+  }
+
+  .capabilities-design {
+    &::before {
+      content: "\f1fc";
+    }
+  }
+  .capabilities-dev {
+    &::before {
+      content: "\f121";
+    }
+  }
+  .capabilities-access {
+    &::before {
+      content: "\f29a";
+    }
+  }
+  .capabilities-proto {
+    &::before {
+      content: "\f14e";
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
+.capability-item {
+  padding-top: 25px;
+  margin-top: 50px;
+  border-top: 1px solid vars.$tertiary-blue-5;
+  p {
+    color: vars.$bright-blue;
+  }
+}

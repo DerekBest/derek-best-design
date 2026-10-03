@@ -1,31 +1,58 @@
-.hero-main {
-  position: relative;
-  align-items: center;
-  height: 80vh;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  &::after {
-    display: none;
-    content: "\f078";
-    font-family: $font-awesome;
-    font-size: 58px;
-    color: rgb(0, 73, 129, 0.6);
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-29px);
-  }
-  p {
-    padding: 0;
-    font-size: 1.3em;
-    color: $bright-blue;
+@use "../helpers/variables" as vars;
+
+.eyebrow {
+  color: vars.$bright-blue;
+  margin: 0 0 16px;
+  font-family: vars.$eyebrow;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-bottom: 100px;
+}
+
+.section-heading > span,
+.section-label,
+.footer-label {
+  font-family: vars.$eyebrow;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: vars.$bright-blue;
+}
+
+.section-heading > span,
+.section-label {
+  font-size: 0.7rem;
+}
+
+.section-heading {
+  h2 {
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    letter-spacing: -0.06em;
+    line-height: 0.7;
   }
 }
 
-.portfolio {
-  background-color: rgba(255, 255, 255, 0.07);
-  h2 {
-    grid-column: 2 / span 1;
-  }
+/* Sections ------ */
+.about-section,
+#contact,
+.capabilities,
+.work-section {
+  padding: 140px 0;
+}
+
+/* Archived 9/26
+.portfolio,
+.about,
+.contact {
+  padding: 150px 0;
 }
 .portfolio-content {
   display: grid;
@@ -33,9 +60,24 @@
   grid-gap: 20px;
   align-items: center;
   justify-content: center;
-  margin: 10em 0;
+  padding: 0 0 120px;
+  margin-bottom: 120px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   &.portfolio-content--top {
     margin-top: 4em;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+  .project-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-family: vars.$eyebrow;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
   .gallery-container {
     &:nth-child(1) {
@@ -66,31 +108,9 @@
     padding-top: 6em;
   }
 }
-.grid-work-ready {
-  article {
-    z-index: 2;
-    grid-column: 6 / span 5;
-  }
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -190px;
-    left: 0;
-    background: url(/assets/img/briefcase.png) no-repeat 22% 50%;
-    background-size: contain;
-    width: 60%;
-    height: 500px;
-  }
-}
-.briefcase {
-  position: absolute;
-  top: -100px;
-  background: url(/assets/img/briefcase.png) no-repeat 15% 50%;
-  background-size: contain;
-  width: 90%;
-  height: 90%;
-}
+  */
+
+/* Fader ----------- */
 .fade-in-content,
 .fade-in-on-load,
 .fade-in-on-load-two,
@@ -128,93 +148,6 @@
   opacity: 1 !important;
   transform: translate(0);
 }
-.expertise {
-  p {
-    font-size: 1.7em;
-    text-transform: uppercase;
-    color: $bright-blue;
-  }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 3%;
-    li {
-      position: relative;
-      width: 47%;
-      padding: 10px 0;
-      margin: 0 0 10px;
-      color: #0180e2;
-      font-size: 1.4em;
-      line-height: 1;
-      &::before {
-        background: url(/assets/img/sm-icon-bg.png) no-repeat center center;
-        font-family: $font-awesome;
-        font-size: 22px;
-        font-weight: 600;
-        color: $bright-blue;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateX(-12px);
-      }
-      &:nth-child(1) {
-        &::before {
-          /*f5fc*/
-          content: "\f121";
-        }
-      }
-      &:nth-child(2) {
-        &::before {
-          content: "\f55b";
-        }
-      }
-      &:nth-child(3) {
-        &::before {
-          content: "\f53f";
-        }
-      }
-      &:nth-child(4) {
-        &::before {
-          content: "\f201";
-        }
-      }
-      &:nth-child(5) {
-        &::before {
-          content: url("/assets/img/icon-analytics.png");
-        }
-      }
-      &:nth-child(6) {
-        &::before {
-          content: url("/assets/img/sm-globe.png");
-        }
-      }
-      &:nth-child(7) {
-        &::before {
-          content: "\f51c";
-        }
-      }
-    }
-  }
-}
-.work-ready-phone,
-.work-ready-email {
-  color: $tertiary-blue-5;
-}
-.work-ready-phone {
-  font-family: $headers;
-  font-size: 4em;
-  margin: 20px 0 0;
-}
-.work-ready-email {
-  font-size: 2em;
-  margin: 10px 0;
-}
 .downer {
   position: absolute;
   bottom: -80px;
@@ -223,7 +156,7 @@
   background-color: #001729;
   border-radius: 50%;
   color: #005ab5;
-  font-family: $font-awesome;
+  font-family: vars.$font-awesome;
   text-align: center;
   font-size: 2.5em;
   left: 50%;
@@ -231,68 +164,5 @@
   transform: translateY(-40px);
   i {
     transform: translateY(30px);
-  }
-}
-.contact-info {
-  list-style: none;
-  margin: 40px 0 0;
-  padding: 1rem;
-  text-align: center;
-  li {
-    display: inline-block;
-    margin: 0 32px 1rem 0;
-    padding: 0;
-    color: $comp-secondary-3;
-    &:last-child {
-      margin-right: 0;
-    }
-    &.email,
-    &.linked-in,
-    &.resume {
-      &:before {
-        display: inline-block;
-        margin-right: 10px;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-      }
-    }
-    &.email {
-      &:before {
-        content: "\f0e0";
-        font-family: $font-awesome;
-        font-weight: 900;
-      }
-    }
-    &.linked-in {
-      &:before {
-        content: "\f08c";
-        font-family: $font-awesome-brands;
-        font-weight: 400;
-      }
-    }
-    &.resume {
-      &:before {
-        content: "\f15b";
-        font-family: $font-awesome;
-        font-weight: 900;
-      }
-    }
-  }
-}
-.share-icons {
-  text-align: center;
-  color: $comp-secondary-3;
-  font-size: 0.9em;
-  margin: 2em 0 0.9em 0;
-  padding: 0;
-}
-#my_centered_buttons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-  a {
-    span {
-      background-color: transparent !important;
-    }
   }
 }

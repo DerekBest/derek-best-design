@@ -1,3 +1,5 @@
+@use "../helpers/variables" as vars;
+
 .gallery-container {
   position: relative;
 }
@@ -39,7 +41,7 @@
     top: 3px;
     left: 50%;
     transform: translateX(-6px);
-    font-family: $font-awesome;
+    font-family: vars.$font-awesome;
     font-size: 18px;
     color: #005ab5;
   }
@@ -83,14 +85,14 @@
     display: flex;
     transition: all 250ms ease-in-out;
     &.active {
-      border: 1px solid $white;
-      background-color: $comp-secondary-3;
+      border: 1px solid vars.$white;
+      background-color: vars.$comp-secondary-3;
     }
     &:last-child {
       margin-right: 10px;
     }
     &:hover {
-      background-color: $comp-secondary-3;
+      background-color: vars.$comp-secondary-3;
     }
     img {
       width: 20px;
@@ -99,7 +101,7 @@
       cursor: pointer;
       mix-blend-mode: luminosity;
       opacity: 0;
-      transition: $transition-medium;
+      transition: vars.$transition-medium;
       border-radius: 50%;
       &.active {
         opacity: 1;
@@ -109,7 +111,7 @@
         border: none;
       }
       &.active {
-        border: 1px solid $white;
+        border: 1px solid vars.$white;
       }
     }
   }
@@ -147,8 +149,8 @@
 .main-image {
   overflow: hidden;
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+
   img {
     max-width: 100%;
     max-height: 100%;
@@ -165,7 +167,7 @@
   display: flex;
   align-items: center;
   font-size: 14px;
-  color: $white;
+  color: vars.$white;
   position: absolute;
   bottom: -90px;
   left: 0;
@@ -173,22 +175,21 @@
   width: 100%;
   padding: 0 16px;
   background: rgba(0, 0, 0, 0.85);
-  border-radius: 0 0 10px 10px;
-  transition: $transition-medium;
+  transition: vars.$transition-medium;
   .caption-button {
     cursor: pointer;
     position: absolute;
     top: -30px;
     left: 0;
-    font-family: $font-awesome;
+    font-family: vars.$font-awesome;
     text-align: center;
-    color: $white;
+    color: vars.$white;
     background: rgba(0, 0, 0, 0.85);
     margin: 0;
     padding: 6px 0;
     height: 30px;
     width: 30px;
-    transition: $transition-medium;
+    transition: vars.$transition-medium;
     i {
       transform: rotate(180deg);
     }

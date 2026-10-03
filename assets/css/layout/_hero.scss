@@ -1,0 +1,74 @@
+@use "../helpers/variables" as vars;
+
+/* --------------------------------
+   HERO
+-------------------------------- */
+.hero-main {
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  padding: 200px 0 100px 0;
+  &::after {
+    display: none;
+    content: "\f078";
+    font-family: vars.$font-awesome;
+    font-size: 58px;
+    color: rgb(0, 73, 129, 0.6);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-29px);
+  }
+}
+
+.focus-area {
+  border-top: 1px dashed vars.$tertiary-blue-5;
+  padding-top: 3rem;
+  p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: vars.$bright-blue;
+    &:first-child {
+      margin-top: 0;
+    }
+    span {
+      font-family: vars.$eyebrow;
+      text-transform: uppercase;
+      display: inline-block;
+      width: 110px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.anchor-link {
+  margin-top: 3rem;
+  a {
+    &::after {
+      font-family: vars.$font-awesome;
+      font-weight: 600;
+      font-size: 0.9rem;
+      content: "\f063";
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}
+
+.hero-intro {
+  padding: 0;
+  margin-bottom: 3rem;
+  font-size: 1.3em;
+  color: vars.$bright-blue;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-title {
+  color: vars.$bright-blue;
+  font-family: vars.$eyebrow;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+}

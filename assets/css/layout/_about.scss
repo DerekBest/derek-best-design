@@ -1,0 +1,139 @@
+@use "../helpers/variables" as vars;
+
+/* --------------------------------
+   ABOUT
+-------------------------------- */
+
+.about-section {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.about-grid {
+  h2 {
+    max-width: 900px;
+    margin: 0 0 40px;
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
+    letter-spacing: -0.065em;
+    line-height: 0.95;
+  }
+}
+
+.about-grid {
+  p {
+    max-width: 650px;
+    color: vars.$bright-blue;
+    font-size: 1.1rem;
+  }
+}
+
+.resume-container {
+  padding-top: 140px;
+}
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+}
+
+.resume-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 73, 129, 0.45);
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02);
+  transition: vars.$transition-medium;
+  h3 {
+    margin: 0 0 0.9rem;
+    color: vars.$bright-blue;
+    font-family: vars.$headers;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+  ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  & > span {
+    color: vars.$bright-blue;
+    font-size: 0.7rem;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    border-color: rgba(0, 126, 207, 0.8);
+    transform: translateY(-4px);
+  }
+  p,
+  li {
+    color: vars.$white-light;
+    font-family: vars.$body-text;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  &.resume-profile,
+  &.resume-focus,
+  &.resume-education,
+  &.resume-tools,
+  &.resume-team {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-family: vars.$font-awesome;
+      font-size: 30px;
+      font-weight: 600;
+      color: vars.$tertiary-blue-5;
+    }
+  }
+  &.resume-profile {
+    &::after {
+      content: "\f007";
+    }
+  }
+  &.resume-focus {
+    &::after {
+      content: "\f140";
+    }
+  }
+  &.resume-education {
+    &::after {
+      content: "";
+      display: block;
+      background: url(/assets/img/utah-utes-logo.png) center center / contain
+        no-repeat;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &.resume-tools {
+    &::after {
+      content: "\f7d9";
+    }
+  }
+  &.resume-team {
+    &::after {
+      content: "\f0c0";
+    }
+  }
+}
+
+.resume-label {
+  margin: 35px 0 0.75rem;
+  color: vars.$comp-secondary-3;
+  font-family: vars.$eyebrow;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.resume-link {
+  padding-top: 40px;
+}

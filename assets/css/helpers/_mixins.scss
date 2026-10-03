@@ -1,0 +1,11 @@
+@use "variables" as vars;
+@mixin container {
+  width: min(calc(100% - (#{vars.$gutter} * 2)), vars.$max-width);
+  margin-inline: auto;
+}
+@mixin uppercase-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}

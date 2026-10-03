@@ -1,25 +1,31 @@
-@import "helpers/variables";
+@use "normalize";
+@use "main";
 
 /* BASE
 ==========================================================================================*/
-@import "base/fonts";
-@import "base/global";
-@import "base/typography";
-
-/* LAYOUT
-==========================================================================================*/
-@import "layout/header";
-@import "layout/footer";
-
-/* COMPONENTS
-==========================================================================================*/
-@import "components/forms";
-@import "components/gallery";
+@use "base/fonts";
+@use "base/global";
+@use "base/typography";
 
 /* PAGES
 ==========================================================================================*/
-@import "pages/default";
+@use "pages/default";
+
+/* LAYOUT
+==========================================================================================*/
+@use "layout/header";
+@use "layout/about";
+@use "layout/capabilities";
+@use "layout/contact";
+@use "layout/hero";
+@use "layout/work";
+@use "layout/footer";
+
+/* COMPONENTS
+==========================================================================================*/
+@use "components/forms";
+@use "components/gallery";
 
 /* MEDIA QUERIES
 ==========================================================================================*/
-@import "base/media";
+@use "base/media";
