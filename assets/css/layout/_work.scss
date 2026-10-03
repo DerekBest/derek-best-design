@@ -90,15 +90,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-  .portfolio {
-    background: rgba(255, 255, 255, 0.07) url(/assets/img/collage.png)
-      no-repeat -300px 300px;
-    background-blend-mode: hard-light;
-    h2 {
-      grid-column: 3 / span 12;
-      line-height: 0.8;
-    }
-  }
   &::after {
     content: "VIEW CASE STUDY →";
     position: absolute;

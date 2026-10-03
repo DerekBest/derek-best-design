@@ -1,0 +1,131 @@
+@use "../helpers/variables" as vars;
+
+.eyebrow {
+  color: vars.$bright-blue;
+  margin: 0 0 16px;
+  font-family: vars.$eyebrow;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-bottom: 100px;
+}
+
+.section-heading > span,
+.section-label,
+.footer-label {
+  font-family: vars.$eyebrow;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: vars.$bright-blue;
+}
+
+.section-heading > span,
+.section-label {
+  font-size: 0.7rem;
+}
+
+.section-heading {
+  h2 {
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    letter-spacing: -0.06em;
+    line-height: 0.7;
+  }
+}
+
+/* Sections ------ */
+.about-section,
+#contact,
+.capabilities,
+.work-section {
+  padding: 140px 0;
+}
+
+/* Fader ----------- */
+.fade-in-content,
+.fade-in-content--2,
+.fade-in-content--3,
+.fade-in-content--4,
+.fade-in-content--5,
+.fade-in-on-load,
+.fade-in-on-load-two,
+.fade-in-on-load-three {
+  opacity: 0;
+}
+.fade-in-content {
+  transform: translateY(-10px);
+  transition:
+    transform 0.5s ease,
+    opacity 1.5s ease;
+}
+.fade-in-content--2 {
+  transform: translateY(-12px);
+  transition:
+    transform 0.7s ease,
+    opacity 1.5s ease;
+}
+.fade-in-content--3 {
+  transform: translateY(-14px);
+  transition:
+    transform 0.9s ease,
+    opacity 1.5s ease;
+}
+.fade-in-content--4 {
+  transform: translateY(-16px);
+  transition:
+    transform 1.1s ease,
+    opacity 1.5s ease;
+}
+.fade-in-content--5 {
+  transform: translateY(-18px);
+  transition:
+    transform 1.3s ease,
+    opacity 1.5s ease;
+}
+.fade-in-on-load {
+  transform: translateY(-10px);
+  transition:
+    transform 0.2s ease,
+    opacity 1s ease;
+}
+.fade-in-on-load-two {
+  transform: translateY(10px);
+  transition:
+    transform 0.5s ease,
+    opacity 1s ease;
+}
+.fade-in-on-load-three {
+  transform: translateY(-10px);
+  transition:
+    transform 0.7s ease,
+    opacity 1s ease;
+}
+.fade-in {
+  opacity: 1 !important;
+  transform: translate(0);
+}
+.downer {
+  position: absolute;
+  bottom: -80px;
+  width: 90px;
+  height: 90px;
+  background-color: #001729;
+  border-radius: 50%;
+  color: #005ab5;
+  font-family: vars.$font-awesome;
+  text-align: center;
+  font-size: 2.5em;
+  left: 50%;
+  z-index: 2;
+  transform: translateY(-40px);
+  i {
+    transform: translateY(30px);
+  }
+}

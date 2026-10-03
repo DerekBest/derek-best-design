@@ -49,7 +49,7 @@
     <link rel="canonical" href="https://derekbest.com/" />
 
     <link rel="apple-touch-icon" href="icon.png" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=2.0.1" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=2.0.2" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -65,7 +65,7 @@
 
   <body class="loading">
     <!-- Header -->
-    <header class="site-header">
+    <header class="site-header fade-in-on-load">
       <div class="container">
         <div class="header-container header-inner">
           <a href="/" class="logo"
@@ -87,7 +87,7 @@
     <main class="outer hidden">
       <section class="hero-main">
         <div class="container grid-hero">
-          <div class="section-title">01 / Profile</div>
+          <div class="section-title fade-in-on-load">01 / Profile</div>
           <article>
             <p class="eyebrow fade-in-on-load">
               Senior Web, UX/UI Designer & Front-End Developer
@@ -502,7 +502,7 @@
               </p>
             </div>
 
-            <div class="capability fade-in-content">
+            <div class="capability fade-in-content--2">
               <span>02</span>
               <h3 class="capabilities-dev">Development</h3>
               <p>
@@ -511,7 +511,7 @@
               </p>
             </div>
 
-            <div class="capability fade-in-content">
+            <div class="capability fade-in-content--3">
               <span>03</span>
               <h3 class="capabilities-access">Accessibility</h3>
               <p>
@@ -520,7 +520,7 @@
               </p>
             </div>
 
-            <div class="capability fade-in-content">
+            <div class="capability fade-in-content--4">
               <span>04</span>
               <h3 class="capabilities-proto">Prototyping</h3>
               <p>
@@ -529,7 +529,7 @@
               </p>
             </div>
 
-            <div class="capability-item fade-in-content">
+            <div class="capability-item fade-in-content--5">
               <span class="number">05</span>
               <h2><i class="fa-solid fa-robot"></i> AI Efficiency</h2>
               <p>
@@ -565,8 +565,8 @@
           <div>
             <span class="section-label">05 / Resume</span>
           </div>
-          <div class="resume-grid fade-in-content">
-            <article class="resume-card resume-profile">
+          <div class="resume-grid">
+            <article class="resume-card resume-profile fade-in-content">
               <span>01</span>
               <p class="resume-label">Profile</p>
               <h3>Experience</h3>
@@ -577,7 +577,7 @@
               <p>2003 — Present</p>
             </article>
 
-            <article class="resume-card resume-focus">
+            <article class="resume-card resume-focus fade-in-content--2">
               <span>02</span>
               <p class="resume-label">Focus</p>
               <h3>Technology Skills</h3>
@@ -592,7 +592,7 @@
               </ul>
             </article>
 
-            <article class="resume-card resume-team">
+            <article class="resume-card resume-team fade-in-content--3">
               <span>03</span>
               <p class="resume-label">Team</p>
               <h3>Team &amp; Leadership Skills</h3>
@@ -607,7 +607,7 @@
               </ul>
             </article>
 
-            <article class="resume-card resume-tools">
+            <article class="resume-card resume-tools fade-in-content--4">
               <span>04</span>
               <p class="resume-label">Tools</p>
               <h3>Toolkit</h3>
@@ -620,7 +620,7 @@
               </ul>
             </article>
 
-            <article class="resume-card resume-education">
+            <article class="resume-card resume-education fade-in-content--5">
               <span>05</span>
               <p class="resume-label">Education</p>
               <h3>Background</h3>
@@ -784,15 +784,21 @@
           $("body").removeClass("menu-open");
         });
 
-        // Add a class after scrolling
+        function updateHeaderState() {
+          if ($(window).width() <= 900) {
+            $(".site-header").addClass("is-scrolled");
+            return;
+          }
 
-        $(window).on("scroll", function () {
           if ($(window).scrollTop() > 50) {
             $(".site-header").addClass("is-scrolled");
           } else {
             $(".site-header").removeClass("is-scrolled");
           }
-        });
+        }
+
+        $(window).on("scroll resize", updateHeaderState);
+        updateHeaderState();
       });
     </script>
   </body>

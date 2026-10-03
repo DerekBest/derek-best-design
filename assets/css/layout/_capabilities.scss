@@ -12,10 +12,11 @@
 
 .capability,
 .capability-item {
+  transition: all ease 0.5s;
   & > span {
     color: vars.$tertiary-blue-5;
-    font-size: 0.7rem;
-    opacity: 0.5;
+    font-size: 0.8rem;
+    opacity: 0.8;
   }
   h2,
   h3 {
@@ -26,6 +27,7 @@
     transform: translateY(-4px);
     span {
       color: vars.$bright-blue;
+      opacity: 1;
     }
   }
 }

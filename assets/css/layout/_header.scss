@@ -13,12 +13,45 @@
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
     backdrop-filter: blur(12px);
   }
+
+  @media (max-width: 900px) {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+  }
   .header-container {
     &.header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 90px;
+      grid-column: 1 / 12;
+    }
+    .main-nav {
+      display: flex;
+      gap: 32px;
+      a {
+        color: vars.$bright-blue;
+        font-size: 0.8rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+          color: vars.$white;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .header-container {
+    &.header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 75px;
       grid-column: 1 / 12;
     }
     .main-nav {
@@ -70,67 +103,3 @@
     }
   }
 }
-/*
-header {
-  grid-column: 1 / span 3; //Spanning all three columns
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  min-height: 90px;
-  transition: vars.$transition-medium;
-  .nav--top {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    position: absolute;
-    right: 0;
-    max-width: 400px;
-    height: 90px;
-    transition: vars.$transition-medium;
-    ul {
-      flex: 1;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      li {
-        margin-right: 30px;
-        display: inline-block;
-        a {
-          text-decoration: none;
-          color: #fff;
-          font-weight: 400;
-        }
-      }
-    }
-  }
-  .logo {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: 90px;
-    padding: 0 0 0 24px;
-    transition: vars.$transition-medium;
-  }
-  &.sticky {
-    min-height: 60px;
-    background: vars.$header-sticky-bg;
-    .logo {
-      width: 160px;
-      height: 60px;
-    }
-    .nav--top {
-      height: 60px;
-    }
-  }
-}
-.site-logo {
-  width: 100%;
-}
-.burger-menu {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-}
-*/
