@@ -49,7 +49,7 @@
     <link rel="canonical" href="https://derekbest.com/" />
 
     <link rel="apple-touch-icon" href="icon.png" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=2.0.2" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=2.0.3" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -741,17 +741,19 @@
 
     <script>
       $(document).ready(function () {
-        $("body").qpScroll({
-          imagesFolder: "assets/img",
+        if ($(window).width() > 900) {
+          $("body").qpScroll({
+            imagesFolder: "assets/img",
 
-          imagesArray: ["hero-selfie.jpg"],
+            imagesArray: ["hero-selfie.jpg"],
 
-          firstSpeed: 12, //first image scrolls 12 times slower than the page.
+            firstSpeed: 12, //first image scrolls 12 times slower than the page.
 
-          neighbourRatio: 1.1, //each image scrolls 1.1 times (or 10%) faster than the image before it
+            neighbourRatio: 1.1, //each image scrolls 1.1 times (or 10%) faster than the image before it
 
-          offset: 0, //in pixels, how much should each image cover the one before it.
-        });
+            offset: 0, //in pixels, how much should each image cover the one before it.
+          });
+        }
       });
     </script>
 
@@ -761,8 +763,8 @@
 
         document.querySelector("main.outer.hidden").classList.remove("hidden");
       });
-    </script>
-    <script>
+
+      // Menu toggle
       $(function () {
         $(".menu-toggle").on("click", function () {
           const $button = $(this);
