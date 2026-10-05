@@ -1,4 +1,5 @@
 @use "../helpers/variables" as vars;
+@use "../helpers/mixins" as mx;
 
 .eyebrow {
   color: vars.$bright-blue;
@@ -14,30 +15,23 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   margin-bottom: 100px;
-}
-
-.section-heading > span,
-.section-label,
-.footer-label {
-  font-family: vars.$eyebrow;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: vars.$bright-blue;
-}
-
-.section-heading > span,
-.section-label {
-  font-size: 0.7rem;
-}
-
-.section-heading {
   h2 {
     margin: 0;
     font-size: clamp(2.5rem, 5vw, 5rem);
     letter-spacing: -0.06em;
     line-height: 0.7;
   }
+}
+
+.section-heading > span,
+.section-label,
+.footer-label {
+  @include mx.section-heading;
+}
+
+.section-heading > span,
+.section-label {
+  font-size: 0.7rem;
 }
 
 /* Sections ------ */
@@ -127,5 +121,12 @@
   transform: translateY(-40px);
   i {
     transform: translateY(30px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-heading {
+    h2 {
+      line-height: 2.2rem;
+    }
   }
 }

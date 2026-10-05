@@ -56,6 +56,9 @@
 
 .project-copy {
   max-width: 440px;
+  img {
+    width: 100%;
+  }
 }
 
 .project-type {
@@ -75,6 +78,29 @@
 .project-image {
   display: block;
   overflow: hidden;
+}
+
+.other-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.other-project-content {
+  img {
+    width: 100%;
+  }
+  h4 {
+    color: vars.$white-grey;
+  }
+  p {
+    &:not(.project-type) {
+      color: vars.$white;
+    }
+  }
+  .other-project-desc {
+    min-height: 60px;
+  }
 }
 
 .project-image {
@@ -106,5 +132,16 @@
     transition:
       opacity 0.3s ease,
       transform 0.3s ease;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .other-projects {
+    grid-template-columns: 1fr;
+    article {
+      &:first-child {
+        margin-bottom: 120px;
+      }
+    }
   }
 }

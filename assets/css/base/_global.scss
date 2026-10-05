@@ -56,6 +56,34 @@ body {
   }
 }
 
+.to-top {
+  position: absolute;
+  top: -47px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  a {
+    background: vars.$body-bg;
+    font-family: "IBM Plex Mono", Arial, sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    line-height: 0.8rem;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border: 1px solid vars.$blue-trans;
+    border-radius: 2px;
+    &::before {
+      content: "\f0d8";
+      font-family: vars.$font-awesome;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+}
+
 .loading::before {
   content: url("/assets/img/loader.png");
   position: fixed;
@@ -72,12 +100,13 @@ a {
   text-decoration: none;
   transition: vars.$transition-medium;
   &:hover {
-    color: vars.$white;
+    color: vars.$light-blue;
   }
 }
 
 .grid-header,
-.grid-hero {
+.grid-hero,
+.grid-agency {
   position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr);

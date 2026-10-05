@@ -30,16 +30,36 @@
     }
     .main-nav {
       display: flex;
-      gap: 32px;
+      gap: 20px;
       a {
+        position: relative;
+        display: inline-block;
         color: vars.$bright-blue;
         font-size: 0.8rem;
         font-weight: 400;
         letter-spacing: 0.08em;
         text-decoration: none;
         text-transform: uppercase;
+        transition: vars.$transition-slow;
+        &::after {
+          font-family: "Font Awesome 7 Free";
+          font-weight: 600;
+          font-size: 0.8rem;
+          content: "\f063";
+          display: inline-block;
+          margin-left: 8px;
+          transform: translateY(-5px);
+          opacity: 0;
+          transition:
+            transform 250ms ease,
+            opacity 250ms ease;
+        }
         &:hover {
-          color: vars.$white;
+          &::after {
+            transform: translateY(0px);
+            opacity: 1;
+          }
+          color: vars.$light-blue;
         }
       }
     }
@@ -83,23 +103,36 @@
   &:hover span {
     color: vars.$bright-blue;
   }
-  span {
-    display: block;
-  }
   .logo--image {
+    isolation: isolate;
+    overflow: hidden;
     display: flex;
     align-items: center;
+    text-align: center;
     width: 50px;
     height: 50px;
-    padding: 5px;
     margin: 0 16px 0 0;
-    background: vars.$body-bg;
+    background: url("../img/DB.png") center / 50% no-repeat;
     border: 1px solid vars.$tertiary-blue-5;
     border-radius: 50%;
     img {
-      width: 70%;
-      height: 70%;
+      opacity: 0;
+      width: 44px;
+      height: 44px;
       margin: 0 auto;
+      border-radius: 50%;
+      transition: opacity ease 0.5s;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .logo {
+    .logo--image {
+      background: none;
+      img {
+        opacity: 1;
+        mix-blend-mode: hard-light;
+      }
     }
   }
 }

@@ -49,7 +49,7 @@
     <link rel="canonical" href="https://derekbest.com/" />
 
     <link rel="apple-touch-icon" href="icon.png" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=2.0.4" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=2.1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -69,10 +69,7 @@
       <div class="container">
         <div class="header-container header-inner">
           <a href="/" class="logo"
-            ><span class="logo--image"
-              ><img src="assets/img/DB.png" alt="DB logo"
-            /></span>
-            <span class="logo--text">Derek Best</span>
+            ><span class="logo--image"><img src="assets/img/selfie-color.png" alt="Derek Best"/></span>
           </a>
 
           <nav id="main-nav" class="main-nav">
@@ -84,7 +81,7 @@
       </div>
     </header>
     <!-- ***** -->
-    <main class="outer hidden">
+    <main class="outer hidden" id="top">
       <section class="hero-main">
         <div class="container grid-hero">
           <div class="section-title fade-in-on-load">01 / Profile</div>
@@ -114,16 +111,40 @@
 
             <div class="focus-area fade-in-on-load-two">
               <p>
-                <span>Focus:</span>Federal &bull; Healthcare &bull; Defense
-                &bull; Energy
+                <span>Focus:</span>Federal &bull; Defense
+                &bull; Energy &bull; Healthcare
               </p>
               <p><span>Clearance:</span>Cleared &bull; Details on request</p>
-              <p><span>Location:</span>Albuquerque, New Mexico | Remote | Willing to Relocate</p>
+              <p><span>Location:</span>Albuquerque, NM | Remote | Willing to Relocate</p>
               <p class="anchor-link">
                 <a href="#work">Explore Selected Work</a>
               </p>
             </div>
           </article>
+        </div>
+      </section>
+
+      <section class="agency fade-in-on-load">
+        <div class="container">
+          <p class="agency-title">Project delivery for Federal Clients //</p>
+          <div class="agency-grid">
+            <div class="agency-item">
+              <p>Department of Energy</p>
+              <p>DOE</p>
+            </div>
+            <div class="agency-item">
+              <p>Health &amp; Human Services</p>
+              <p>HHS</p>
+            </div>
+            <div class="agency-item">
+              <p>Space Force</p>
+              <p>SF</p>
+            </div>
+            <div class="agency-item">
+              <p>Department of Defense</p>
+              <p>DOD</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -303,11 +324,11 @@
                 <p class="project-type">UX/UI · Responsive · Section 508 · Collaboration</p>
 
                 <h3>Indian Health Service</h3>
-                <p class="project-subhead">Contractor · 2004 - 2026</p>
+                <p class="project-subhead">Contractor · 2004 - 2015</p>
 
                 <p>
                   Redesign and development of a government website delivering
-                  health information and resources.
+                  health information and resources for American Indians &amp; Alaska Natives.
                 </p>
 
                 <!--a href="/work/ihs/" class="text-link"> View case study → </a-->
@@ -398,7 +419,7 @@
             </div>
           </article>
 
-          <!-- PROJECT - LCI -->
+          <!-- PROJECT - LCI 
           <article class="project fade-in-content">
             <div class="project-meta">
               <span>03</span>
@@ -419,7 +440,6 @@
                   and counseling services.
                 </p>
 
-                <!--a href="/work/ihs/" class="text-link"> View case study → </a-->
               </div>
               <div class="gallery-container">
                 <div class="main-image">
@@ -442,7 +462,6 @@
                   </div>
                 </div>
 
-                <!-- Thumbnails -->
                 <div class="thumbnails-container animate__slideOutLeft">
                   <div class="thumbnails" id="gallery3">
                     <span class="thumbnail-items"
@@ -480,7 +499,50 @@
                 </div>
               </div>
             </div>
-          </article>
+          </article> -->
+  
+          <div class="other-projects fade-in-content">
+          <!-- PROJECT - LCI -->
+            <article>
+              <div class="project-meta">
+                <span>03</span>
+                <span>Mental Health</span>
+              </div>
+              <div class="other-project-content">
+                <p class="project-type">UX/UI · Responsive · Hosting</p>
+
+                <h4>Life Change Institute</h4>
+                <p class="project-subhead">Freelance · 2024 - 2026</p>
+
+                <p class="other-project-desc">
+                  Redesign and development of a small business website offering coaching
+                  and counseling services.
+                </p>
+                  <img src="assets/img/lci-home-720.jpg" alt="Life Change Institute"/>
+              </div>
+            </article>
+
+          <!-- PROJECT - DOHC -->
+            <article>
+              <div class="project-meta">
+              <span>04</span>
+              <span>General Healthcare</span>
+              </div>
+              <div class="other-project-content">
+                  <p class="project-type">UX/UI · Graphics · Responsive</p>
+
+                  <h4>Desert Oasis Healthcare</h4>
+                  <p class="project-subhead">Freelance · 2025</p>
+
+                  <p class="other-project-desc">
+                    Redesign and development of a small business offering coaching
+                    and counseling services.
+                  </p>
+                  <img src="assets/img/dohc-member-benefits-720.jpg" alt="DOHC"/>
+              </div>
+            </article>
+          </div>
+
         </div>
       </section>
 
@@ -669,13 +731,14 @@
 
             <button type="submit" class="form-submit-btn">Send Message</button>
           </form>
+          </div>
         </div>
-
-        </div>
-
         
         <div class="container">
           <div class="footer-bottom">
+            <div class="to-top">
+              <p><a href="#top">Top of Page</a></p>
+            </div>
             <ul class="contact-info">
               <li>
                 <a href="https://www.cloudflare.com" target="_blank"
