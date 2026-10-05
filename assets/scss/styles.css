@@ -1457,7 +1457,7 @@ h4 {
 .other-projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: clamp(10px, 4vw, 80px);
 }
 
 .other-project-content img {
