@@ -1,0 +1,75 @@
+<script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+<script src="assets/js/plugins.js"></script>
+
+<script src="assets/js/gallery.js"></script>
+
+<script src="assets/js/parallaxScroll.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($(window).width() > 900) {
+      $("body").qpScroll({
+        imagesFolder: "assets/img",
+
+        imagesArray: ["hero-selfie.jpg"],
+
+        firstSpeed: 12, //first image scrolls 12 times slower than the page.
+
+        neighbourRatio: 1.1, //each image scrolls 1.1 times (or 10%) faster than the image before it
+
+        offset: 0, //in pixels, how much should each image cover the one before it.
+      });
+    }
+  });
+
+  // Loader
+  window.addEventListener("load", function () {
+    document.body.classList.remove("loading");
+
+    document.querySelector("main.outer.hidden").classList.remove("hidden");
+  });
+
+  // Menu toggle
+  $(function () {
+    $(".menu-toggle").on("click", function () {
+      const $button = $(this);
+      const $menu = $("#main-nav");
+
+      const isOpen = $button.attr("aria-expanded") === "true";
+
+      $button.attr("aria-expanded", !isOpen);
+      $menu.toggleClass("is-open");
+
+      $("body").toggleClass("menu-open", !isOpen);
+    });
+
+    // Close mobile menu when a navigation link is clicked
+
+    $("#main-nav a").on("click", function () {
+      $(".menu-toggle").attr("aria-expanded", "false");
+      $("#main-nav").removeClass("is-open");
+      $("body").removeClass("menu-open");
+    });
+
+    function updateHeaderState() {
+      if ($(window).width() <= 900) {
+        $(".site-header").addClass("is-scrolled");
+        return;
+      }
+
+      if ($(window).scrollTop() > 50) {
+        $(".site-header").addClass("is-scrolled");
+      } else {
+        $(".site-header").removeClass("is-scrolled");
+      }
+    }
+
+    $(window).on("scroll resize", updateHeaderState);
+    updateHeaderState();
+  });
+</script>

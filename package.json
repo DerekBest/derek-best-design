@@ -1,0 +1,18 @@
+{
+  "name": "derek-best-design",
+  "version": "1.0.0",
+  "description": "Portfolio site, showcasing skills and work accomplished and a brief bio.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "sass": "^1.105.1"
+  }
+}

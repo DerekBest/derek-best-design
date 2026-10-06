@@ -1,0 +1,15 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    {% include "partials/site-head.njk" %}
+  </head>
+
+  <body class="loading">
+    <main class="outer hidden" id="top">
+      {% include "partials/header.njk" %} {{ content | safe }} {% include
+      "partials/footer.njk" %}
+    </main>
+
+    {% include "partials/global-scripts.njk" %}
+  </body>
+</html>
