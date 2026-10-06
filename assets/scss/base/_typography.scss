@@ -30,8 +30,8 @@ h3 {
   color: vars.$white;
 }
 h4 {
-  font-size: 1.6em;
-  font-weight: 100;
+  font-size: clamp(1.3rem, 2.75vw, 1.6rem);
+  font-weight: 300;
   margin-bottom: 0.5em;
 }
 @media screen and (max-width: 600px) {
