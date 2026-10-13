@@ -1,4 +1,5 @@
 @use "../helpers/variables" as vars;
+@use "../helpers/mixins" as mx;
 
 /* --------------------------------
    ABOUT
@@ -15,7 +16,7 @@
 
 .about-grid {
   h2 {
-    max-width: 900px;
+    max-width: vars.$break-lg;
     margin: 0 0 40px;
     font-size: clamp(2.5rem, 5vw, 5.5rem);
     letter-spacing: -0.065em;
@@ -42,40 +43,8 @@
 }
 
 .resume-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 73, 129, 0.45);
-  padding: 1.5rem 1.25rem;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02);
-  transition: vars.$transition-medium;
-  h3 {
-    margin: 0 0 0.9rem;
-    color: vars.$bright-blue;
-    font-family: vars.$headers;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-  }
-  ul {
-    margin: 0;
-    padding-left: 1.2rem;
-  }
-  & > span {
-    color: vars.$bright-blue;
-    font-size: 0.7rem;
-    opacity: 0.5;
-  }
-
-  &:hover {
-    border-color: rgba(0, 126, 207, 0.8);
-    transform: translateY(-4px);
-  }
-  p,
-  li {
-    color: vars.$white-light;
-    font-family: vars.$body-text;
-    font-size: 1rem;
-    line-height: 1.7;
-  }
+  @include mx.bg-color-card;
+  @include mx.global-border-radius;
   &.resume-profile,
   &.resume-focus,
   &.resume-education,

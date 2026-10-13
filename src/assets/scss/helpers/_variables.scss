@@ -7,17 +7,14 @@
 
 // Layout
 $max-width: 1400px;
-$gutter: 32px;
+$gutter: 16px;
 
 // Breakpoints
-$phone-width: 480px;
-$tablet-width: 720px;
-$ipad-min-width: 768px;
-$ipad-max-width: 1024px;
-$desktop-small-width: 1366px;
-$desktop-medium-width: 1440px;
-$desktop-large-width: 1920px;
-$desktop-x-large-width: 2560px;
+$break-sm: 640px;
+$break-md: 768px;
+$break-lg: 1024px;
+$break-xl: 1280px;
+$break-xxl: 1540px;
 
 // Fonts
 $main-nav-font-size: 1.2rem;
@@ -68,9 +65,11 @@ $main-hover-color: #006a83;
 $transparent-nav-link-color: #eee;
 $transparent-nav-hover-color: #fff;
 
-$border-radius-small: 2px;
-$border-radius-medium: 4px;
-$border-radius-large: 10px;
+$border-radius-small: 4px;
+$border-radius-medium: 10px;
+$border-radius-large: 20px;
+$border-radius-full: 9999px;
+$border-radius-null: 0px;
 
 // Effects
 $transition-slow: all 500ms ease-in-out;

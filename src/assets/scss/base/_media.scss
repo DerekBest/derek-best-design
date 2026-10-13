@@ -1,6 +1,6 @@
 @use "../helpers/variables" as vars;
 
-@media screen and (max-width: 900px) {
+@media (max-width: vars.$break-lg) {
   .grid-header,
   .grid-hero,
   .grid-work-ready,
@@ -58,7 +58,7 @@
     grid-template-columns: repeat(2, minmax(220px, 1fr));
   }
 }
-@media screen and (max-width: 600px) {
+@media (max-width: vars.$break-sm) {
   .project-image {
     position: relative;
     &::after {

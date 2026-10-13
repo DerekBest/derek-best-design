@@ -1,32 +1,14 @@
-<script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="/assets/js/vendor/modernizr-3.11.2.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
 
-<script src="assets/js/plugins.js"></script>
+<script src="/assets/js/plugins.js"></script>
 
-<script src="assets/js/gallery.js"></script>
-
-<script src="assets/js/parallaxScroll.js"></script>
+<script src="/assets/js/gallery.js"></script>
 
 <script>
-  $(document).ready(function () {
-    if ($(window).width() > 900) {
-      $("body").qpScroll({
-        imagesFolder: "assets/img",
-
-        imagesArray: ["hero-selfie.jpg"],
-
-        firstSpeed: 12, //first image scrolls 12 times slower than the page.
-
-        neighbourRatio: 1.1, //each image scrolls 1.1 times (or 10%) faster than the image before it
-
-        offset: 0, //in pixels, how much should each image cover the one before it.
-      });
-    }
-  });
-
   // Loader
   window.addEventListener("load", function () {
     document.body.classList.remove("loading");

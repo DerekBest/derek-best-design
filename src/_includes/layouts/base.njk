@@ -6,10 +6,12 @@
 
   <body class="loading">
     <main class="outer hidden" id="top">
-      {% include "partials/header.njk" %} {{ content | safe }} {% include
-      "partials/footer.njk" %}
+      {% include "partials/header.njk" %} {{ content | safe }}
+
+      <footer>{% include "partials/footer.njk" %}</footer>
     </main>
 
-    {% include "partials/global-scripts.njk" %}
+    {% include "partials/global-scripts.njk" %} {% include
+    "partials/home-scripts.njk" %}
   </body>
 </html>

@@ -1,4 +1,31 @@
 @use "variables" as vars;
+
+$border-radius-lg: 20px;
+$border-radius-md: 10px;
+$border-radius-sm: 4px;
+
+// Breakpoint tokens mapping
+$breakpoints: (
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+);
+
+// Reusable responsive mixin
+@mixin respond-to($size) {
+  // Check if the key exists in our map dictionary
+  @if map-has-key($breakpoints, $size) {
+    $value: map-get($breakpoints, $size);
+
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint key: #{$size}. Please choose from sm, md, lg, or xl.";
+  }
+}
+
 @mixin container {
   width: min(calc(100% - (#{vars.$gutter} * 2)), vars.$max-width);
   margin-inline: auto;
@@ -15,4 +42,98 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: vars.$bright-blue;
+}
+@mixin body-bg-alt {
+  background: rgba(255, 255, 255, 0.07) url(/assets/img/collage.png)
+    no-repeat -300px 300px;
+  background-blend-mode: hard-light;
+}
+@mixin bg-color-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 73, 129, 0.45);
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02);
+  transition: vars.$transition-medium;
+  h3 {
+    margin: 0 0 0.9rem;
+    color: vars.$bright-blue;
+    font-family: vars.$headers;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+  ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  & > span {
+    color: vars.$bright-blue;
+    font-size: 0.7rem;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    border-color: rgba(0, 126, 207, 0.8);
+    transform: translateY(-4px);
+  }
+  p,
+  li {
+    color: vars.$white-light;
+    font-family: vars.$body-text;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+@mixin heading-fixed-width {
+  max-width: 800px;
+  margin: 40px 0;
+  font-size: clamp(3rem, 6vw, 7rem);
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+}
+
+@mixin global-border-radius {
+  --global-radius: #{$border-radius-lg};
+  border-radius: var(--global-radius);
+
+  @media (max-width: vars.$break-md) {
+    --global-radius: #{$border-radius-md};
+  }
+}
+
+@mixin forms-border-radius {
+  border-radius: vars.$border-radius-medium;
+}
+@mixin btn-border-radius {
+  border-radius: vars.$border-radius-full;
+}
+@mixin btn-solid {
+  justify-self: start;
+  border: 1px solid vars.$comp-secondary-3;
+  border-radius: vars.$border-radius-full;
+  background: vars.$comp-secondary-3;
+  color: vars.$white;
+  font-family: vars.$eyebrow;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  transition: vars.$transition-medium;
+  &:hover {
+    background: vars.$bright-blue;
+    border-color: vars.$bright-blue;
+    transform: translateY(-2px);
+  }
+}
+@mixin full-bleed-mobile {
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  border-radius: vars.$border-radius-null;
+  box-shadow: none;
 }

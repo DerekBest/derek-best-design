@@ -1,1 +1,12 @@
 @use "../helpers/variables" as vars;
+@use "../helpers/mixins" as mx;
+
+.contact {
+  h2 {
+    @include mx.heading-fixed-width;
+    & + p {
+      color: vars.$bright-blue;
+      max-width: 50%;
+    }
+  }
+}

@@ -43,7 +43,7 @@
       font-family: vars.$eyebrow;
       text-transform: uppercase;
       display: inline-block;
-      width: 110px;
+      min-width: 110px;
       font-size: 0.9rem;
     }
   }
@@ -108,13 +108,14 @@
           padding: 5px;
           margin-top: 10px;
           border: 1px solid vars.$bright-blue;
+          border-radius: vars.$border-radius-small;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: vars.$break-lg) {
   .hero-main {
     padding: 140px 0 120px;
   }
@@ -142,7 +143,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: vars.$break-sm) {
   .hero-main {
     height: auto;
     p {
@@ -188,5 +189,8 @@
         height: 2px;
       }
     }
+  }
+  .focus-area {
+    border-top: none;
   }
 }

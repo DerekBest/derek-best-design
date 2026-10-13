@@ -1,4 +1,5 @@
 @use "../helpers/variables" as vars;
+@use "../helpers/mixins" as mx;
 
 .message {
   max-width: 700px;
@@ -36,6 +37,7 @@
   font-size: 1rem;
   line-height: 1.5;
   transition: vars.$transition-medium;
+  @include mx.forms-border-radius;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.3);
@@ -55,22 +57,5 @@
 }
 
 .form-submit-btn {
-  justify-self: start;
-  border: 1px solid vars.$comp-secondary-3;
-  background: vars.$comp-secondary-3;
-  color: vars.$white;
-  font-family: vars.$eyebrow;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0.9rem 1.5rem;
-  cursor: pointer;
-  transition: vars.$transition-medium;
-
-  &:hover {
-    background: vars.$bright-blue;
-    border-color: vars.$bright-blue;
-    transform: translateY(-2px);
-  }
+  @include mx.btn-solid;
 }

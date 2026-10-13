@@ -1,19 +1,10 @@
 @use "../helpers/variables" as vars;
+@use "../helpers/mixins" as mx;
 
 footer {
-  //grid-column: 1 / span 3; /* Spanning all three columns */
-  //text-align: center;
-  //background-color: $dark;
   color: vars.$white;
   padding: 10px;
   background: url(/assets/img/wh-trans-sq.png) left bottom repeat-x;
-  h2 {
-    max-width: 800px;
-    margin: 40px 0;
-    font-size: clamp(3rem, 6vw, 7rem);
-    letter-spacing: -0.07em;
-    line-height: 0.9;
-  }
 }
 
 .footer-label {
@@ -32,7 +23,7 @@ footer {
 }
 .footer-bottom {
   position: relative;
-  padding: 60px 0 0 0;
+  padding: 60px 0;
   margin-top: 120px;
   border-top: 1px solid vars.$blue-trans;
   .contact-info {

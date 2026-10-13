@@ -14,7 +14,7 @@
     backdrop-filter: blur(12px);
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: vars.$break-lg) {
     position: fixed;
     background: rgba(0, 0, 0, 0.4);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
@@ -65,7 +65,7 @@
     }
   }
 }
-@media screen and (max-width: 600px) {
+@media (max-width: vars.$break-sm) {
   .header-container {
     &.header-inner {
       display: flex;
@@ -111,9 +111,51 @@
     text-align: center;
     width: 50px;
     height: 50px;
-    margin: 0 16px 0 0;
+    border: 3px solid vars.$tertiary-blue-5;
+    border-radius: 50%;
+    position: relative; // Establish positioning context
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("../img/DB.png") center / 50% no-repeat;
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
+      z-index: -1; // Keeps it behind the foreground image
+    }
+
+    img {
+      opacity: 0;
+      width: 44px;
+      height: 44px;
+      margin: 0 auto;
+      border-radius: 50%;
+      transition:
+        transform 0.6s ease-in-out,
+        opacity 0.4s ease-in-out;
+    }
+
+    // 2. Synchronize the background fade out with the image fade in and spin
+    &:hover {
+      &::before {
+        opacity: 0; // Fades out the background image
+      }
+      img {
+        opacity: 1; // Fades in the foreground image
+        transform: rotate(360deg); // Spins the foreground image
+      }
+    }
+  }
+  /*.logo--image {
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    height: 50px;
     background: url("../img/DB.png") center / 50% no-repeat;
-    border: 1px solid vars.$tertiary-blue-5;
+    border: 3px solid vars.$tertiary-blue-5;
     border-radius: 50%;
     img {
       opacity: 0;
@@ -121,14 +163,16 @@
       height: 44px;
       margin: 0 auto;
       border-radius: 50%;
-      transition: opacity ease 0.5s;
     }
-  }
+  }*/
 }
-@media screen and (max-width: 900px) {
+@media (max-width: vars.$break-lg) {
   .logo {
     .logo--image {
       background: none;
+      &::before {
+        display: none;
+      }
       img {
         opacity: 1;
         mix-blend-mode: hard-light;
