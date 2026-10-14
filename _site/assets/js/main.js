@@ -1,6 +1,6 @@
 $(window).on("load", function () {
   window.setTimeout(function () {
-    function isInViewport(element, offset = 300) {
+    function isInViewport(element, offset = 500) {
       const bounds = element.getBoundingClientRect();
       const viewportHeight =
         window.innerHeight || document.documentElement.clientHeight;
