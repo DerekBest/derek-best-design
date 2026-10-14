@@ -1247,7 +1247,7 @@ h4 {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../img/DB.png") center/50% no-repeat;
+  background: #001729 url("../img/DB.png") center/50% no-repeat;
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
   z-index: -1;

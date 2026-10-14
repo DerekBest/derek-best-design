@@ -118,7 +118,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: url("../img/DB.png") center / 50% no-repeat;
+      background: vars.$body-bg url("../img/DB.png") center / 50% no-repeat;
       opacity: 1;
       transition: opacity 0.4s ease-in-out;
       z-index: -1; // Keeps it behind the foreground image
