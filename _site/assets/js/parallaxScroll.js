@@ -144,7 +144,7 @@
           opacity: "1",
           transform: "translateY(0)",
         });
-      }, 3000);
+      }, 300);
 
       numberOfImages = options.imagesArray.length;
       imageCounter = 0;

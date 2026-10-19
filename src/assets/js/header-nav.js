@@ -1,9 +1,9 @@
 // Loader
-window.addEventListener("load", function () {
+/*window.addEventListener("load", function () {
   document.body.classList.remove("loading");
 
   document.querySelector("main.outer.hidden").classList.remove("hidden");
-});
+});*/
 
 // Menu toggle
 $(function () {

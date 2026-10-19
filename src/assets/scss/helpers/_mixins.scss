@@ -14,7 +14,7 @@ $breakpoints: (
 
 // Reusable responsive mixin
 @mixin respond-to($size) {
-  // Check if the key exists in our map dictionary
+  // Check if the key exists in map dictionary
   @if map-has-key($breakpoints, $size) {
     $value: map-get($breakpoints, $size);
 
@@ -42,6 +42,34 @@ $breakpoints: (
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: vars.$bright-blue;
+}
+@mixin section-padding($section-padding) {
+  padding: 140px 0;
+
+  section {
+    padding: $section-padding 0;
+    @content;
+  }
+
+  @media (max-width: vars.$break-md) {
+    padding: 70px 0;
+  }
+}
+
+@mixin work-section-padding {
+  @include section-padding(70px) {
+    &:nth-child(-n + 2) {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@mixin case-section-padding {
+  @include section-padding(40px);
 }
 @mixin body-bg-alt {
   background: rgba(255, 255, 255, 0.07) url(/assets/img/collage.png)
@@ -118,6 +146,7 @@ $breakpoints: (
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  text-align: center;
   padding: 0.9rem 1.5rem;
   cursor: pointer;
   transition: vars.$transition-medium;

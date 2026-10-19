@@ -30,6 +30,10 @@
   color: vars.$bright-blue;
 }
 
+.case-container {
+  @include mx.body-bg-alt;
+  @include mx.case-section-padding;
+}
 .case-top-grid {
   position: relative;
   z-index: 1;
@@ -47,8 +51,6 @@
   }
 }
 .artifact-container {
-  @include mx.body-bg-alt;
-  padding-top: 14rem;
   p {
     max-width: clamp(0px, 100%, 55rem);
     color: vars.$white;
@@ -56,6 +58,9 @@
 }
 .case--content-block {
   margin-bottom: 4rem;
+  &.case-first {
+    padding-top: 70px;
+  }
   &.block-margin {
     margin-top: 6rem;
   }
@@ -74,7 +79,7 @@
   }
 }
 .artifacts {
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 .artifacts-grid {
   display: grid;
@@ -136,6 +141,12 @@
       }
     }
   }
+  .case--content-block {
+    &.case-first {
+      padding-top: 0;
+    }
+  }
+
   .artifact-container {
     padding-top: 4rem;
   }

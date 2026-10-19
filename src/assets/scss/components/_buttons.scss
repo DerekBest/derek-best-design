@@ -1,0 +1,20 @@
+@use "../helpers/variables" as vars;
+@use "../helpers/mixins" as mx;
+
+.btn-default {
+  @include mx.btn-solid;
+  &:hover {
+    color: vars.$white;
+  }
+  &.btn--case {
+    display: none;
+  }
+}
+@media (max-width: vars.$break-md) {
+  .btn-default {
+    width: 100%;
+    &.btn--case {
+      display: block;
+    }
+  }
+}

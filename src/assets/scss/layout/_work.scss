@@ -1,8 +1,9 @@
 @use "../helpers/variables" as vars;
 @use "../helpers/mixins" as mx;
 
-.work-section {
+.work-container {
   @include mx.body-bg-alt;
+  @include mx.work-section-padding;
 }
 
 /* --------------------------------
@@ -156,6 +157,13 @@
       &:first-child {
         margin-bottom: 120px;
       }
+    }
+  }
+}
+@media (max-width: vars.$break-md) {
+  .project-image {
+    &::after {
+      display: none;
     }
   }
 }

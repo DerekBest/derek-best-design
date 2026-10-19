@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/js");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
   eleventyConfig.addPassthroughCopy("src/icon.png");
-  eleventyConfig.addPassthroughCopy("src/loader.png");
+  //eleventyConfig.addPassthroughCopy("src/loader.png");
 
   // NATIVE SCSS COMPILATION PIPELINE
   eleventyConfig.addTemplateFormats("scss");

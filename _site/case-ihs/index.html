@@ -41,6 +41,7 @@
 <script src="/assets/js/plugins.js" defer></script>
 <script src="/assets/js/vendor/modernizr-3.11.2.min.js" defer></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="/assets/js/scroll-animate.js"></script>
 <script src="/assets/js/header-nav.js" defer></script>
 
 <!-- Icons & Assets -->
@@ -62,8 +63,8 @@
 
   </head>
 
-  <body class="loading">
-    <main class="outer hidden" id="top">
+  <body>
+    <main id="top">
       <!-- Header -->
 <header class="site-header">
   <div class="container">
@@ -84,9 +85,9 @@
 </header>
 <!-- ***** -->
  
-<section class="case-declaration">
+<nav class="case-declaration section fadeup">
   <div class="container">
-    <article>
+    <article class="fadeup fade-delay">
       <p>
         Case Study &bull; IHS
         <span>&nbsp;/&nbsp; <a href="../case-sandia/">Sandia Labs</a></span>
@@ -94,11 +95,12 @@
       <p>2004-2015 &bull; Health & Human Services</p>
     </article>
   </div>
-</section>
-<section class="case-overview">
+</nav>
+
+<section class="case-overview section fadeup">
   <div class="container">
-    <h2>Indian Health Service</h2>
-    <div class="case-top-grid">
+    <h2 class="fadeup fade-delay">Indian Health Service</h2>
+    <div class="case-top-grid fadeup fade-delay">
       <article class="case-intro-image">
         <img
           src="../assets/img/projects/ihs/ihs-2012-multi.png"
@@ -121,177 +123,192 @@
     </div>
   </div>
 </section>
-<section class="artifact-container work-section">
-  <div class="container">
-    <article class="case--content-block">
-      <h4 class="section-label-x2">01 / Overview</h4>
-      <p>
-        As a federal contractor at the Indian Health Service (IHS)—a division of
-        the U.S. Department of Health and Human Services (HHS)—for 11 years, I
-        led and contributed to diverse, cross-functional product teams. My
-        contributions spanned small-scale feature enhancements, custom graphics
-        creation, and large-scale, nationally recognized digital redesigns.
-      </p>
-    </article>
 
-    <!-- Case Content -->
-    <article class="case--content-block">
-      <h4 class="section-label-x2">02 / IHS.GOV REDESIGN &bull; 2010 - 2012</h4>
-
-      <p>
-        Following an initial optimization of ihs.gov in 2009, I spearheaded a
-        comprehensive redesign starting in 2010. This initiative launched just
-        as the federal government began mandating Section 508 compliance for
-        public-facing digital assets. The objective was to deliver a visually
-        engaging, high-impact user experience while strictly adhering to 100%
-        accessibility standards.
-      </p>
-
-      <p>
-        By pairing robust backend architectures with cutting-edge front-end
-        frameworks—including custom mobile layouts built on jQuery Mobile—I
-        engineered a sustainable design framework that supported the agency for
-        over a decade.
-      </p>
-    </article>
-
-    <div class="case-details-grid">
-      <article class="case-details-card">
-        <span>01</span>
-        <h3>UX Strategy & Leadership</h3>
+<div class="case-container">
+  <section class="section fadeup artifact-container">
+    <div class="container">
+      <article class="case--content-block case-first fadeup fade-delay">
+        <h4 class="section-label-x2">01 / Overview</h4>
         <p>
-          Conducted and translated user research insights into comprehensive
-          wireframes and user flows. Led the creative direction to establish a
-          cohesive visual identity aligned with agency design standards.
+          As a federal contractor at the Indian Health Service (IHS)—a division
+          of the U.S. Department of Health and Human Services (HHS)—for 11
+          years, I led and contributed to diverse, cross-functional product
+          teams. My contributions spanned small-scale feature enhancements,
+          custom graphics creation, and large-scale, nationally recognized
+          digital redesigns.
         </p>
       </article>
 
-      <article class="case-details-card">
-        <span>02</span>
-        <h3>Prototyping & Development</h3>
+      <!-- Case Content -->
+      <article class="case--content-block fadeup fade-delay">
+        <h4 class="section-label-x2">
+          02 / IHS.GOV REDESIGN &bull; 2010 - 2012
+        </h4>
+
         <p>
-          Designed graphics and built high-fidelity interactive prototypes.
-          Wrote clean JavaScript interactions and foundational CSS to accelerate
-          engineering handoffs.
+          Following an initial optimization of ihs.gov in 2009, I spearheaded a
+          comprehensive redesign starting in 2010. This initiative launched just
+          as the federal government began mandating Section 508 compliance for
+          public-facing digital assets. The objective was to deliver a visually
+          engaging, high-impact user experience while strictly adhering to 100%
+          accessibility standards.
+        </p>
+
+        <p>
+          By pairing robust backend architectures with cutting-edge front-end
+          frameworks—including custom mobile layouts built on jQuery Mobile—I
+          engineered a sustainable design framework that supported the agency
+          for over a decade.
         </p>
       </article>
-    </div>
 
-    <!-- Artifacts -->
-    <div class="artifacts">
-      <h4 class="section-label-x2">02.1 / Artifacts</h4>
-      <div class="artifacts-grid">
-        <!-- BLOCK 01 -->
-        <article>
-          <img
-            src="../assets/img/projects/ihs/ihs-home.jpg"
-            alt="IHS Homepage Redesign View"
-          />
+      <div class="case-details-grid">
+        <article class="case-details-card fadeup fade-delay">
           <span>01</span>
+          <h3>UX Strategy & Leadership</h3>
           <p>
-            <strong>HOMEPAGE REDESIGN</strong> &bull; Complete UX/UI design and
-            front-end development. Features custom logo branding, unified global
-            navigation, interactive graphic assets, and accessible
-            JavaScript-driven animations.
+            Conducted and translated user research insights into comprehensive
+            wireframes and user flows. Led the creative direction to establish a
+            cohesive visual identity aligned with agency design standards.
           </p>
         </article>
 
-        <!-- BLOCK 02 -->
-        <article>
-          <img
-            src="../assets/img/projects/ihs/ihs-for-providers.jpg"
-            alt="IHS Provider Core Page Layout"
-          />
+        <article class="case-details-card fadeup fade-delay">
           <span>02</span>
+          <h3>Prototyping & Development</h3>
           <p>
-            <strong>CORE PORTALS & TEMPLATES</strong> &bull; Responsive layout
-            architecture designed and hand-coded for complex user paths.
-            Implements cross-browser styling and accessible structural grids
-            optimized for clinical providers.
-          </p>
-        </article>
-
-        <!-- BLOCK 03 -->
-        <article>
-          <img
-            src="../assets/img/projects/ihs/ihs-health-topics.jpg"
-            alt="IHS Health Topics Directory Section"
-          />
-          <span>03</span>
-          <p>
-            <strong>INFORMATION ARCHITECTURE</strong> &bull; Section-level
-            interface layouts built to streamline data-heavy content tables.
-            Features 100% Section 508-compliant hierarchical navigation
-            frameworks.
-          </p>
-        </article>
-
-        <!-- BLOCK 04 -->
-        <article>
-          <img
-            src="../assets/img/projects/ihs/ihs-cough.jpg"
-            alt="Accessible Multimedia Video Interface"
-          />
-          <span>04</span>
-          <p>
-            <strong>ACCESSIBLE MULTIMEDIA</strong> &bull; Custom-engineered
-            HTML5/CSS3 video player featuring strict WCAG and Section 508
-            compliance. Coded with accessible keyboard controls, screen-reader
-            focus handling, and synchronized captions.
-          </p>
-        </article>
-
-        <!-- BLOCK 05 -->
-        <article>
-          <img
-            src="../assets/img/projects/ihs/ihs-diabetes.jpg"
-            alt="Multi-level Campaign Page for Diabetes Awareness"
-          />
-          <span>05</span>
-          <p>
-            <strong>CAMPAIGN & DRILL-DOWN DESIGN</strong> &bull; Deep,
-            multi-level microsite layout supporting national health initiatives.
-            Includes bespoke healthcare icon sets, vector graphic design, and
-            performant UI animations.
-          </p>
-        </article>
-
-        <!-- BLOCK 06 -->
-        <article>
-          <img
-            src="../assets/img/projects/ihs/ihs-finder.jpg"
-            alt="Interactive Health Care Facility Locator Map"
-          />
-          <span>06</span>
-          <p>
-            <strong>HEALTHCARE FACILITY LOCATOR</strong> &bull; Full-stack UX/UI
-            design and interactive development. Features a highly usable custom
-            map interface optimized for programmatic geography lookup and
-            tactile mobile interactions.
+            Designed graphics and built high-fidelity interactive prototypes.
+            Wrote clean JavaScript interactions and foundational CSS to
+            accelerate engineering handoffs.
           </p>
         </article>
       </div>
     </div>
+  </section>
 
-    <article class="case--content-block">
-      <h4 class="section-label-x2">03 / Internal Websites</h4>
-      <p>
-        Parallel to public initiatives, I architected and hand-built dozens of
-        custom internal websites and restricted portals supporting critical
-        American Indian and Alaska Native health initiatives. Developed prior to
-        the widespread adoption of modern Content Management Systems (CMS),
-        these standalone platforms required bespoke front-end engineering and
-        rigorous information architecture. I took full ownership of translating
-        complex healthcare workflows into clean, secure, and accessible internal
-        systems that empowered agency staff and healthcare providers nationwide.
-      </p>
-    </article>
-  </div>
-</section>
+  <!-- Artifacts -->
+  <section class="section fadeup artifact-container">
+    <div class="container">
+      <div class="artifacts fadeup fade-delay">
+        <h4 class="section-label-x2">02.1 / Artifacts</h4>
+        <div class="artifacts-grid">
+          <!-- BLOCK 01 -->
+          <article class="fadeup fade-delay">
+            <img
+              src="../assets/img/projects/ihs/ihs-home.jpg"
+              alt="IHS Homepage Redesign View"
+            />
+            <span>01</span>
+            <p>
+              <strong>HOMEPAGE REDESIGN</strong> &bull; Complete UX/UI design
+              and front-end development. Features custom logo branding, unified
+              global navigation, interactive graphic assets, and accessible
+              JavaScript-driven animations.
+            </p>
+          </article>
+
+          <!-- BLOCK 02 -->
+          <article class="fadeup fade-delay">
+            <img
+              src="../assets/img/projects/ihs/ihs-for-providers.jpg"
+              alt="IHS Provider Core Page Layout"
+            />
+            <span>02</span>
+            <p>
+              <strong>CORE PORTALS & TEMPLATES</strong> &bull; Responsive layout
+              architecture designed and hand-coded for complex user paths.
+              Implements cross-browser styling and accessible structural grids
+              optimized for clinical providers.
+            </p>
+          </article>
+
+          <!-- BLOCK 03 -->
+          <article class="fadeup fade-delay">
+            <img
+              src="../assets/img/projects/ihs/ihs-health-topics.jpg"
+              alt="IHS Health Topics Directory Section"
+            />
+            <span>03</span>
+            <p>
+              <strong>INFORMATION ARCHITECTURE</strong> &bull; Section-level
+              interface layouts built to streamline data-heavy content tables.
+              Features 100% Section 508-compliant hierarchical navigation
+              frameworks.
+            </p>
+          </article>
+
+          <!-- BLOCK 04 -->
+          <article class="fadeup fade-delay">
+            <img
+              src="../assets/img/projects/ihs/ihs-cough.jpg"
+              alt="Accessible Multimedia Video Interface"
+            />
+            <span>04</span>
+            <p>
+              <strong>ACCESSIBLE MULTIMEDIA</strong> &bull; Custom-engineered
+              HTML5/CSS3 video player featuring strict WCAG and Section 508
+              compliance. Coded with accessible keyboard controls, screen-reader
+              focus handling, and synchronized captions.
+            </p>
+          </article>
+
+          <!-- BLOCK 05 -->
+          <article class="fadeup fade-delay">
+            <img
+              src="../assets/img/projects/ihs/ihs-diabetes.jpg"
+              alt="Multi-level Campaign Page for Diabetes Awareness"
+            />
+            <span>05</span>
+            <p>
+              <strong>CAMPAIGN & DRILL-DOWN DESIGN</strong> &bull; Deep,
+              multi-level microsite layout supporting national health
+              initiatives. Includes bespoke healthcare icon sets, vector graphic
+              design, and performant UI animations.
+            </p>
+          </article>
+
+          <!-- BLOCK 06 -->
+          <article class="fadeup fade-delay">
+            <img
+              src="../assets/img/projects/ihs/ihs-finder.jpg"
+              alt="Interactive Health Care Facility Locator Map"
+            />
+            <span>06</span>
+            <p>
+              <strong>HEALTHCARE FACILITY LOCATOR</strong> &bull; Full-stack
+              UX/UI design and interactive development. Features a highly usable
+              custom map interface optimized for programmatic geography lookup
+              and tactile mobile interactions.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fadeup artifact-container">
+    <div class="container">
+      <article class="case--content-block fadeup fade-delay">
+        <h4 class="section-label-x2">03 / Internal Websites</h4>
+        <p>
+          Parallel to public initiatives, I architected and hand-built dozens of
+          custom internal websites and restricted portals supporting critical
+          American Indian and Alaska Native health initiatives. Developed prior
+          to the widespread adoption of modern Content Management Systems (CMS),
+          these standalone platforms required bespoke front-end engineering and
+          rigorous information architecture. I took full ownership of
+          translating complex healthcare workflows into clean, secure, and
+          accessible internal systems that empowered agency staff and healthcare
+          providers nationwide.
+        </p>
+      </article>
+    </div>
+  </section>
+</div>
 
 <!-- Contact -->
-<section class="contact">
-  <div class="container">
+<section class="contact section fadeup">
+  <div class="container fadeup fade-delay">
     <h2>Let's <em>Work</em> Together</h2>
 
     <p>

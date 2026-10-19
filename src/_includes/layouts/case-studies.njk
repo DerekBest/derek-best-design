@@ -4,8 +4,8 @@
     {% include "partials/site-head.njk" %}
   </head>
 
-  <body class="loading">
-    <main class="outer hidden" id="top">
+  <body>
+    <main id="top">
       {% include "partials/header.njk" %} {{ content | safe }}
 
       <footer>{% include "partials/footer.njk" %}</footer>

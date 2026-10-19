@@ -81,8 +81,10 @@
   letter-spacing: 0.12rem;
 }
 
-.agency {
+.agency-container {
   background: rgba(0, 0, 0, 0.2);
+}
+.agency {
   padding: 40px 0;
   color: vars.$bright-blue;
   .agency-title {
@@ -120,6 +122,7 @@
     padding: 140px 0 120px;
   }
   .focus-area {
+    padding-bottom: 3rem;
     p {
       display: block;
       span {
