@@ -159,6 +159,14 @@
       }
     }
   }
+  .project-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-copy {
+    max-width: 650px;
+  }
 }
 @media (max-width: vars.$break-md) {
   .project-image {

@@ -37,15 +37,6 @@
     }
   }
 
-  .project-content {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .project-copy {
-    max-width: 650px;
-  }
-
   .capability-grid {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -1578,7 +1578,7 @@ h4 {
 
 @media (max-width: 1024px) {
   .hero-main {
-    padding: 140px 0 120px;
+    padding: 140px 0 40px;
   }
   .focus-area {
     padding-bottom: 3rem;
@@ -1840,6 +1840,13 @@ h4 {
   }
   .other-projects article:first-child {
     margin-bottom: 120px;
+  }
+  .project-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .project-copy {
+    max-width: 650px;
   }
 }
 @media (max-width: 768px) {
@@ -2270,13 +2277,6 @@ footer {
   }
   .portfolio-content.portfolio-content--top {
     margin-top: 2em;
-  }
-  .project-content {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-  .project-copy {
-    max-width: 650px;
   }
   .capability-grid {
     grid-template-columns: repeat(2, 1fr);
