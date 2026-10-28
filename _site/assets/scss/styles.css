@@ -1512,7 +1512,7 @@ h4 {
   margin-left: 8px;
 }
 .focus-area dl dd:last-child::after {
-  content: "";
+  content: " ";
 }
 
 .anchor-link {

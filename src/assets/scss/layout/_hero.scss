@@ -52,7 +52,7 @@
       }
       &:last-child {
         &::after {
-          content: "";
+          content: " ";
         }
       }
     }
