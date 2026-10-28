@@ -1490,21 +1490,29 @@ h4 {
   border-top: 1px dashed #004981;
   padding-top: 3rem;
 }
-.focus-area p {
+.focus-area dl {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
   color: #007ecf;
 }
-.focus-area p:first-child {
-  margin-top: 0;
-}
-.focus-area p span {
+.focus-area dl dt {
   font-family: "IBM Plex Mono", Arial, sans-serif;
   text-transform: uppercase;
-  display: inline-block;
-  min-width: 110px;
   font-size: 0.9rem;
+  min-width: 110px;
+}
+.focus-area dl dd {
+  padding: 0;
+  margin: 0 8px 0 0;
+}
+.focus-area dl dd::after {
+  content: "•";
+  display: inline-block;
+  margin-left: 8px;
+}
+.focus-area dl dd:last-child::after {
+  content: "";
 }
 
 .anchor-link {
@@ -1583,12 +1591,18 @@ h4 {
   .focus-area {
     padding-bottom: 3rem;
   }
-  .focus-area p {
+  .focus-area dl {
     display: block;
   }
-  .focus-area p span {
-    display: block;
-    margin-bottom: 10px;
+  .focus-area dl dt {
+    min-width: auto;
+    margin-bottom: 0.5rem;
+  }
+  .focus-area dl dd {
+    display: inline-block;
+  }
+  .focus-area.focus-area--cases {
+    border-top: none;
   }
   .agency .agency-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1646,9 +1660,6 @@ h4 {
     display: block;
     width: 24px;
     height: 2px;
-  }
-  .focus-area {
-    border-top: none;
   }
 }
 .work-container {
