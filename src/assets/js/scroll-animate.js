@@ -18,10 +18,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
   for (let section of sections) {
     const children = section.getElementsByClassName("fade-delay");
     for (let count = 0; count < children.length; count++) {
-      children[count].setAttribute(
-        "style",
-        "transition-delay: " + count * 0.5 + "s",
-      );
+      const child = children[count];
+      child.style.transitionDelay = count * 0.5 + "s";
+
+      const clearTransitionDelay = (event) => {
+        if (event.target === child && event.propertyName === "opacity") {
+          child.style.removeProperty("transition-delay");
+          child.removeEventListener("transitionend", clearTransitionDelay);
+        }
+      };
+
+      child.addEventListener("transitionend", clearTransitionDelay);
     }
     observer.observe(section);
   }
