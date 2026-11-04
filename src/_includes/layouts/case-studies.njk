@@ -5,10 +5,8 @@
   </head>
 
   <body>
-    <main id="top">
-      {% include "partials/header.njk" %} {{ content | safe }}
-
-      <footer>{% include "partials/footer.njk" %}</footer>
-    </main>
+    {% include "partials/header.njk" %}
+    <main id="top">{{ content | safe }}</main>
+    <footer>{% include "partials/footer.njk" %}</footer>
   </body>
 </html>
