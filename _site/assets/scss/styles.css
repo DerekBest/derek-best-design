@@ -1902,11 +1902,17 @@ footer {
   padding: 0;
   color: #b26f00;
 }
-.footer-bottom .contact-info li.email:before, .footer-bottom .contact-info li.linked-in:before, .footer-bottom .contact-info li.resume:before {
+.footer-bottom .contact-info li.email, .footer-bottom .contact-info li.linked-in, .footer-bottom .contact-info li.www, .footer-bottom .contact-info li.resume {
+  transition: all all 250ms ease-in-out ease;
+}
+.footer-bottom .contact-info li.email:before, .footer-bottom .contact-info li.linked-in:before, .footer-bottom .contact-info li.www:before, .footer-bottom .contact-info li.resume:before {
   display: inline-block;
   margin-right: 10px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+}
+.footer-bottom .contact-info li.email:hover::before, .footer-bottom .contact-info li.linked-in:hover::before, .footer-bottom .contact-info li.www:hover::before, .footer-bottom .contact-info li.resume:hover::before {
+  color: #007ecf;
 }
 .footer-bottom .contact-info li.email:before {
   content: "\f0e0";
@@ -1917,6 +1923,11 @@ footer {
   content: "\f08c";
   font-family: "Font Awesome 7 Brands";
   font-weight: 400;
+}
+.footer-bottom .contact-info li.www:before {
+  content: "\f0ac";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
 }
 .footer-bottom .contact-info li.resume:before {
   content: "\f15b";

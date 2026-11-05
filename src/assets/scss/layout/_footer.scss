@@ -38,12 +38,19 @@ footer {
       color: vars.$comp-secondary-3;
       &.email,
       &.linked-in,
+      &.www,
       &.resume {
+        transition: all vars.$transition-medium ease;
         &:before {
           display: inline-block;
           margin-right: 10px;
           text-rendering: auto;
           -webkit-font-smoothing: antialiased;
+        }
+        &:hover {
+          &::before {
+            color: vars.$bright-blue;
+          }
         }
       }
       &.email {
@@ -58,6 +65,13 @@ footer {
           content: "\f08c";
           font-family: vars.$font-awesome-brands;
           font-weight: 400;
+        }
+      }
+      &.www {
+        &:before {
+          content: "\f0ac";
+          font-family: vars.$font-awesome;
+          font-weight: 900;
         }
       }
       &.resume {
