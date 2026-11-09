@@ -1253,7 +1253,6 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
-
 .about-grid h2 {
   max-width: 1024px;
   margin: 0 0 40px;
@@ -1261,11 +1260,9 @@ h4 {
   letter-spacing: -0.065em;
   line-height: 0.95;
 }
-
 .about-grid p {
   max-width: 650px;
   color: #007ecf;
-  font-size: 1.1rem;
 }
 
 .resume-container {
@@ -1537,14 +1534,6 @@ h4 {
   margin-bottom: 0;
 }
 
-.section-title {
-  color: #007ecf;
-  font-family: "IBM Plex Mono", Arial, sans-serif;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12rem;
-}
-
 .agency-container {
   background: rgba(0, 0, 0, 0.2);
 }
@@ -1685,6 +1674,16 @@ h4 {
 /* --------------------------------
    PROJECT
 -------------------------------- */
+.section-title {
+  color: #007ecf;
+  font-family: "IBM Plex Mono", Arial, sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
 .project {
   position: relative;
   padding: 0 0 120px;
@@ -1706,6 +1705,10 @@ h4 {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+.project-meta dd {
+  margin: 0;
+  padding: 0;
 }
 
 .project h3 {
@@ -1990,12 +1993,6 @@ footer {
   gap: 1.5rem;
   padding-top: 40px;
 }
-
-.form-group {
-  display: grid;
-  gap: 0.6rem;
-}
-
 .contact-form label {
   color: #007ecf;
   font-family: "IBM Plex Mono", Arial, sans-serif;
@@ -2003,6 +2000,15 @@ footer {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+.contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.6rem;
 }
 
 .contact-form input,
@@ -2022,17 +2028,29 @@ footer {
 .contact-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.3);
 }
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 3px solid rgba(0, 126, 207, 0.85);
+  outline-offset: 3px;
   border-color: #007ecf;
-  box-shadow: 0 0 0 2px rgba(0, 126, 207, 0.18);
+  box-shadow: 0 0 0 3px rgba(0, 126, 207, 0.2);
   background: rgba(0, 0, 0, 0.28);
 }
+.contact-form input[aria-invalid=true],
+.contact-form textarea[aria-invalid=true] {
+  border-color: #ff8b8b;
+  box-shadow: 0 0 0 2px rgba(255, 139, 139, 0.18);
+}
 
-.contact-form textarea {
-  min-height: 180px;
-  resize: vertical;
+.field-required {
+  color: #ff8b8b;
+}
+
+.form-status {
+  min-height: 1.25rem;
+  margin: 0;
+  color: #fafafa;
+  font-size: 0.95rem;
 }
 
 .form-submit-btn {

@@ -9,6 +9,15 @@
 /* --------------------------------
    PROJECT
 -------------------------------- */
+.section-title {
+  color: vars.$bright-blue;
+  font-family: vars.$eyebrow;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  margin: 0 0 2rem;
+  padding: 0;
+}
 
 .project {
   position: relative;
@@ -31,6 +40,10 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  dd {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .project {

@@ -10,20 +10,23 @@
   display: grid;
   gap: 1.5rem;
   padding-top: 40px;
+  label {
+    color: vars.$bright-blue;
+    font-family: vars.$eyebrow;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  textarea {
+    min-height: 180px;
+    resize: vertical;
+  }
 }
 
 .form-group {
   display: grid;
   gap: 0.6rem;
-}
-
-.contact-form label {
-  color: vars.$bright-blue;
-  font-family: vars.$eyebrow;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .contact-form input,
@@ -43,17 +46,29 @@
     color: rgba(255, 255, 255, 0.3);
   }
 
-  &:focus {
-    outline: none;
+  &:focus-visible {
+    outline: 3px solid rgba(0, 126, 207, 0.85);
+    outline-offset: 3px;
     border-color: vars.$bright-blue;
-    box-shadow: 0 0 0 2px rgba(0, 126, 207, 0.18);
+    box-shadow: 0 0 0 3px rgba(0, 126, 207, 0.2);
     background: rgba(0, 0, 0, 0.28);
+  }
+
+  &[aria-invalid="true"] {
+    border-color: #ff8b8b;
+    box-shadow: 0 0 0 2px rgba(255, 139, 139, 0.18);
   }
 }
 
-.contact-form textarea {
-  min-height: 180px;
-  resize: vertical;
+.field-required {
+  color: #ff8b8b;
+}
+
+.form-status {
+  min-height: 1.25rem;
+  margin: 0;
+  color: vars.$white-light;
+  font-size: 0.95rem;
 }
 
 .form-submit-btn {

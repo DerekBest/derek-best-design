@@ -11,9 +11,6 @@
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 3fr;
-}
-
-.about-grid {
   h2 {
     max-width: vars.$break-lg;
     margin: 0 0 40px;
@@ -21,13 +18,10 @@
     letter-spacing: -0.065em;
     line-height: 0.95;
   }
-}
-
-.about-grid {
   p {
     max-width: 650px;
     color: vars.$bright-blue;
-    font-size: 1.1rem;
+    //font-size: 1.1rem;
   }
 }
 
